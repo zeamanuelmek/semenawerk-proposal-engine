@@ -8,7 +8,7 @@
 #   bash /home/claude/setup.sh
 #
 # Or from scratch:
-#   curl -sL https://raw.githubusercontent.com/YOUR_USERNAME/semenawerk-proposal-engine/main/setup.sh | bash
+#   curl -sL https://raw.githubusercontent.com/zeamanuelmek/semenawerk-proposal-engine/main/setup.sh | bash
 # ============================================================
 
 set -e
