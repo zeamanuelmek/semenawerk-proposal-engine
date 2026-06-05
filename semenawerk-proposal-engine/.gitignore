@@ -1,0 +1,7 @@
+outputs/
+node_modules/
+*.pdf
+.DS_Store
+
+# Keep the outputs folder but ignore its contents
+!outputs/.gitkeep

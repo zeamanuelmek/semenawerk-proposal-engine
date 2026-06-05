@@ -1,0 +1,126 @@
+{
+  "_instructions": "Copy this file, rename to {client_slug}.json, fill in your client's data. Remove all keys starting with underscore before building.",
+
+  "meta": {
+    "client_slug": "kmt_trading",
+    "company_name": "K M T Trading PLC",
+    "legal_form": "Private Limited Company (PLC)",
+    "submission_date": "May 2026",
+    "prepared_for": "DBE and EIC",
+    "document_version": "1.0"
+  },
+
+  "project": {
+    "title": "Integrated Agro-Processing Facility",
+    "subtitle": "Animal Feed, Nutritious Food & Coffee Processing",
+    "tagline": "A Strategic Investment in Ethiopian Agro-Industrial Value Addition",
+    "cover_slogan": "FROM ETHIOPIAN FARMS. TO REGIONAL TABLES.",
+    "location_park": "Adama Industry Park",
+    "location_city": "Adama",
+    "location_region": "Oromia Regional State",
+    "land_area_m2": 10000,
+    "sector": "Agro-Processing",
+    "project_type": "Greenfield Industrial Facility"
+  },
+
+  "investment": {
+    "total_etb": 200000000,
+    "total_usd": 1267427,
+    "equity_pct": 30,
+    "loan_pct": 70,
+    "equity_etb": 60000000,
+    "loan_etb": 140000000,
+    "loan_rate_pct": 17,
+    "loan_tenor_years": 8,
+    "grace_period_months": 24,
+    "exchange_rate_birr_per_usd": 157.8,
+    "inflation_pct": 18,
+    "corporate_tax_pct": 30,
+    "tax_holiday_years": 0
+  },
+
+  "products": [
+    {
+      "division": "Animal Feed Manufacturing",
+      "short_name": "Animal Feed",
+      "description": "Compound feeds for livestock, poultry, and dairy",
+      "annual_capacity_tons": 15000,
+      "y1_utilization_pct": 50,
+      "y1_revenue_etb_m": 78,
+      "y5_revenue_etb_m": 158
+    },
+    {
+      "division": "Nutritious Food for Children and Elderly",
+      "short_name": "Nutritious Food",
+      "description": "Fortified food products for children and elderly consumers",
+      "annual_capacity_tons": 4500,
+      "y1_utilization_pct": 40,
+      "y1_revenue_etb_m": 52,
+      "y5_revenue_etb_m": 102
+    },
+    {
+      "division": "Coffee Roasting and Packaging",
+      "short_name": "Coffee",
+      "description": "Roasting, grinding, and value-added coffee preparation",
+      "annual_capacity_tons": 2000,
+      "y1_utilization_pct": 45,
+      "y1_revenue_etb_m": 50,
+      "y5_revenue_etb_m": 100
+    }
+  ],
+
+  "raw_materials": {
+    "domestic_pct_weight": 85,
+    "domestic_pct_value": 78,
+    "imported_items": ["Vitamin premix", "Mineral premix", "Specialized packaging"],
+    "key_domestic_inputs": ["Maize", "Soybeans", "Rice", "Wheat", "Cotton Seed Cake", "Green Coffee Beans"]
+  },
+
+  "market": {
+    "domestic_pct": 50,
+    "export_pct": 50,
+    "y1_domestic_pct": 65,
+    "export_countries": ["UAE", "Saudi Arabia", "Sudan", "Kenya", "Somalia", "Djibouti"]
+  },
+
+  "employment": {
+    "y1_direct": 180,
+    "y3_direct": 230,
+    "female_pct": 50,
+    "temporary_construction": 120,
+    "indirect_estimate": 600
+  },
+
+  "utilities": {
+    "power_base_kw": 800,
+    "power_peak_kw": 1200,
+    "power_source": "Ethiopian Electric Utility via Adama Industry Park",
+    "water_total_m3_day": 125,
+    "backup": "1,000 kVA diesel generator"
+  },
+
+  "implementation": {
+    "commencement": "June 2026",
+    "completion": "May 2027",
+    "commercial_launch": "June 2027",
+    "total_months": 12
+  },
+
+  "financials": {
+    "y1_revenue_etb_m": 180,
+    "y5_revenue_etb_m": 360,
+    "y1_ebitda_etb_m": 28,
+    "y5_ebitda_etb_m": 69,
+    "project_irr_pct": 23,
+    "equity_irr_pct": 28,
+    "npv_etb_m": 68,
+    "payback_years": 5.5,
+    "y5_dscr": 2.0
+  },
+
+  "decisions_made": [
+    "Investment reconciled: brief typo '200,000,0000' corrected to '200,000,000' via equity+loan sum check",
+    "Coffee elevated to co-equal third division (mentioned as side note in brief)",
+    "Export portfolio added for all three divisions (brief said Import & Export but only listed import products)"
+  ]
+}
