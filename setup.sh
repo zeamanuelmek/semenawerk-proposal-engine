@@ -13,7 +13,7 @@
 
 set -e
 
-REPO="https://github.com/YOUR_USERNAME/semenawerk-proposal-engine.git"
+REPO="https://github.com/zeamanuelmek/semenawerk-proposal-engine.git"
 TARGET="/home/claude/proposal-engine"
 NODE_MODULES="/home/claude/.npm-global/lib/node_modules"
 
