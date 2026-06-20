@@ -11,7 +11,7 @@ Built for **SemEnaWerk Design Agency** by Zeamanuel (Zea), Addis Ababa.
 
 ```bash
 # 1. Clone and set up (run once per session)
-git clone https://github.com/YOUR_USERNAME/semenawerk-proposal-engine.git /home/claude/proposal-engine
+git clone https://github.com/zeamanuelmek/semenawerk-proposal-engine.git /home/claude/proposal-engine
 cd /home/claude/proposal-engine
 bash setup.sh
 
