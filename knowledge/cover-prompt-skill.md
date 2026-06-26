@@ -1,115 +1,133 @@
 # Cover Image Prompt Skill — SemEnaWerk Proposals
 
 Produces a **copy-paste-ready ChatGPT image prompt** for the front-cover poster of a proposal.
-Output is a single vertical poster (portrait, ~2:3, e.g. 1024×1536) in the established house style.
+Output is a single vertical poster (portrait, ~2:3, e.g. 1024×1536).
 
 The deliverable from this skill is **the prompt text only** — Zea pastes it into ChatGPT, generates,
 and inserts the image manually as the cover. Claude does not generate the image itself.
 
----
-
-## House cover anatomy (locked layout — keep every time)
-
-From top to bottom, the cover always has these 8 bands:
-
-1. **Header band (white):** company logo concept at top-left, company name in PRIMARY (bold caps),
-   a one-line facility descriptor under it where the descriptor's first words are in ACCENT.
-2. **Hero band:** large headline "COMPREHENSIVE FEASIBILITY STUDY" *or* "INVESTMENT PROPOSAL" in
-   PRIMARY caps, with a short ACCENT underline rule, and a one-line subtitle. A photographic hero
-   image of the facility/products fills the right ~55% of this band.
-3. **Fact column (left of hero):** three circular ACCENT/PRIMARY icons — Project Location, Land
-   Requirement, Project Activities — each with bold label + value.
-4. **Photo strip:** a horizontal row of 4–5 small photographic tiles showing product/process shots,
-   separated by thin gaps.
-5. **Three-metric band (light grey):** PLANNED INVESTMENT · FUNDING STRUCTURE · MARKET DESTINATION,
-   each with a circular PRIMARY icon and bold figures.
-6. **Icon-strip band (PRIMARY fill):** 5 outlined circular icons in white/ACCENT with short caps
-   captions — jobs, modern facility, import substitution, sustainability, a tagline.
-7. **Submission band (white):** SUBMITTED TO · DOCUMENT REF. · STATUS · DATE in four columns with a
-   small calendar icon.
-8. **Footer band:** confidentiality statement (small print, left) + EIC / IPDC / DBE logo lockups (right).
-
-Keep this structure identical across clients. **Differentiate** through: the two theme colors, the
-logo concept, the hero/product imagery, the facility descriptor, and the metric values.
+**The point of this skill is variety.** Two proposals in the same sector should not produce the same
+poster with different colors swapped in. The layout archetype itself is a creative choice, made fresh
+per client — not a fixed skeleton that gets re-skinned.
 
 ---
 
-## Prompt template (fill the {braces}, then output verbatim to Zea)
+## The content every cover must carry (fixed — this is what doesn't change)
+
+Regardless of which archetype is chosen, the poster must communicate:
+- Company name + logo concept + facility descriptor
+- A headline naming the deliverable (feasibility study / investment proposal)
+- Project location, land requirement, project activities
+- A hero or anchor image rooted in the company's actual products/process
+- Planned investment, funding structure (equity/loan split), market destination (domestic/export split)
+- A short set of impact highlights (jobs, capacity, import substitution, sustainability, tagline)
+- Submission block: submitted to, document ref, status, date
+- Footer: confidentiality statement + EIC / IPDC / DBE logo lockups
+
+**How** these are arranged, and which get visual emphasis, is what should vary.
+
+---
+
+## Six layout archetypes — pick one per client, never the same one twice in a row
+
+Treat this as a deck to draw from, the same way the color library has 28 themes. Match the archetype
+to the company's personality (a heavy-industry steel plant should not look like a cosmetics startup),
+then rotate so consecutive clients — even in the same sector — don't get the same skeleton.
+
+### Archetype 1 — "Dossier Stack" (the original house style; reserve for classic/conservative clients)
+Header band → headline + hero photo band → fact column → photo strip → metrics band → icon strip →
+submission band → footer. Dense, document-like, lots of horizontal dividers. Best for: heavy
+industrial, steel, construction, traditional trading houses — clients who want to look established
+and procedural.
+
+### Archetype 2 — "Hero Split"
+The top 65% of the poster is a single large, full-bleed photographic hero image (factory, product
+field, or process shot) with the company name and headline overlaid in a translucent PRIMARY panel
+in a corner — not a separate white header band. Facts, metrics, and icon strip are compressed into a
+single dense lower third with a PRIMARY background and white text, almost like a single info-panel
+sitting under the image. Best for: energy, solar, mobility, anything with one striking hero shot worth
+showing large. Feels modern and bold rather than document-like.
+
+### Archetype 3 — "Diagonal Cut"
+A bold diagonal line splits the poster corner-to-corner (top-left to lower-right, or mirrored). One
+side is a photo column (stacked product/process images), the other is the text/info side on white.
+Facts and metrics run down the text side as a vertical stack rather than horizontal bands. The
+diagonal itself is rendered in ACCENT as a thin rule. Best for: manufacturing with strong product
+visuals (plastics, packaging, consumer goods) — see Kaleab Plastic as the existing reference point for
+this archetype; vary the diagonal angle and which side holds the photos for the next client.
+
+### Archetype 4 — "Circular Badge Centerpiece"
+A large circular or hexagonal badge sits centered in the upper third, containing the logo emblem and
+company name, like a seal. Hero imagery wraps around it as a soft collage rather than a single
+rectangle. Below, metrics are presented as a horizontal row of large pill-shaped stat cards (rounded
+rectangles with big numbers) instead of plain columns. Best for: agro-processing, coffee, food —
+clients where a seal/crest reads as quality and heritage.
+
+### Archetype 5 — "Magazine Cover"
+Treats the poster like an editorial cover: a single dominant full-page photographic background (faded
+toward the bottom for text legibility), minimal text overlay — large headline only, set in a
+magazine-style serif or bold condensed sans — with facts and metrics pulled into a compact strip along
+one side (left or right margin, vertically stacked icons with very short labels). The DBE/EIC/IPDC
+footer becomes a small discreet strip at the very bottom rather than a full band. Best for: tech,
+services, premium consumer brands — clients wanting a sleek, less document-like first impression.
+
+### Archetype 6 — "Grid Mosaic"
+The whole poster is organized as a strict grid of unequal-sized rectangular tiles (like a mood board):
+one large tile for the hero photo, several medium tiles for product shots, and small tiles that double
+as the fact/metric/icon callouts (text set directly inside colored tiles rather than in separate
+bands). No long horizontal bands at all — the whole thing reads as a mosaic. Best for: multi-division
+companies (multiple product lines) where the mosaic naturally shows portfolio breadth.
+
+---
+
+## Worked reference (Archetype 1, Senay Energy, theme #7 Dark Green + Yellow)
+
+This is the existing Mengsteab/Senay/Kaleab-style cover, kept as the literal reference for Archetype 1
+only — do not treat it as the default for every client going forward.
 
 > Create a professional, high-resolution vertical investment-proposal cover poster (portrait, 2:3
-> aspect ratio) for an Ethiopian industrial company. Clean corporate infographic style, flat vector
-> UI elements combined with realistic photographic panels, crisp sans-serif typography, generous
-> white space, print-quality. **Strict two-color brand palette: PRIMARY deep {primary_name} {PRIMARY_HEX}
-> and ACCENT {accent_name} {ACCENT_HEX}, on white, with light-grey {#F2F2F2} panel fills and dark-grey
-> {#595959} body text. Do not introduce other brand colors.**
+> aspect ratio). Clean corporate infographic style, flat vector UI elements combined with realistic
+> photographic panels, crisp sans-serif typography, generous white space, print-quality. Strict
+> two-color palette: PRIMARY deep forest green #14532D and ACCENT golden yellow #CA8A04, on white,
+> with light-grey #F2F2F2 panel fills and dark-grey #595959 body text. Do not introduce other colors.
 >
-> LAYOUT, top to bottom:
+> 1. White header band: circular emblem logo — a shield with a stylized letter S framed by a laurel
+>    wreath in #14532D — next to "SENAY ENERGY PLC" in bold uppercase #14532D, with "SOLAR PV MODULE"
+>    in #CA8A04 and "MANUFACTURING PLANT" in #14532D beneath.
+> 2. Hero band: headline "COMPREHENSIVE FEASIBILITY STUDY" in #14532D with a short #CA8A04 underline,
+>    subtitle "FOR 500 MW SOLAR PV MODULE MANUFACTURING PLANT". Right ~55%: a bright modern solar-module
+>    assembly hall with rows of finished PV panels on pallets.
+> 3. Fact rows: location pin — KILINTO INDUSTRIAL PARK / Addis Ababa, Ethiopia; grid icon — LAND
+>    REQUIREMENT / 30,000 m² (3 Hectares); gear icon — PROJECT ACTIVITIES: Mono PERC, TOPCon & Bifacial
+>    Solar Modules; Solar Cell Assembly & Stringing; Junction Boxes, Cables, Mounting Structures.
+> 4. Photo strip of 5 tiles: panel assembly line, automated soldering station, a worker inspecting a
+>    finished module, close-up of cell stringing, stacked palletized modules.
+> 5. Light-grey metrics band: PLANNED INVESTMENT / ETB 600,000,000.00; FUNDING STRUCTURE / 30% Equity
+>    (ETB 180,000,000.00), 70% Loan (ETB 420,000,000.00); MARKET DESTINATION / 70% Domestic, 30% Export
+>    — Kenya, Uganda, Tanzania, Rwanda, South Sudan, Djibouti, Somalia.
+> 6. Full-width #14532D icon band: "300–400 DIRECT JOBS CREATION"; "500 MW ANNUAL SOLAR MODULE
+>    CAPACITY"; "STRONG IMPORT SUBSTITUTION & FOREIGN EXCHANGE"; "RENEWABLE ENERGY & TECHNOLOGY
+>    TRANSFER"; "FROM ETHIOPIAN SUN. TO REGIONAL POWER."
+> 7. White submission band: SUBMITTED TO / Development Bank of Ethiopia (DBE) & Ethiopian Investment
+>    Commission (EIC); DOCUMENT REF. / SENAY-IP-DBE-SOLAR2026-001; STATUS / Submitted to DBE/EIC; DATE
+>    / June 2026.
+> 8. Footer: confidentiality statement, plus EIC / IPDC / DBE logo lockups.
 >
-> 1. White header band: at top-left, a circular emblem logo for "{COMPANY NAME}" — {logo_concept,
->    e.g. "a shield with a stylized letter M, framed by a laurel wreath, in {PRIMARY_HEX}"}. To its
->    right, the company name "{COMPANY NAME}" in bold uppercase {PRIMARY_HEX}, and beneath it
->    "{FACILITY DESCRIPTOR}" where the first two words "{accent_words}" are in {ACCENT_HEX} and the
->    rest in {PRIMARY_HEX}.
-> 2. Hero band: large bold uppercase headline "{HEADLINE — e.g. COMPREHENSIVE FEASIBILITY STUDY}" in
->    {PRIMARY_HEX}, with a short horizontal {ACCENT_HEX} underline rule, then the subtitle
->    "FOR {PROJECT SUBTITLE}" in {PRIMARY_HEX}. On the right ~55%, a bright realistic photograph of
->    {hero_image — e.g. "a modern detergent and chemical manufacturing plant with stainless tanks and
->    piping under a blue sky, pallets of finished bottled products in the foreground"}.
-> 3. Below the headline on the left, three fact rows, each a filled {PRIMARY_HEX} circle icon plus text:
->    (a) location pin — "PROJECT LOCATION" / "{LOCATION PARK}" / "{CITY, Ethiopia}";
->    (b) grid icon — "LAND REQUIREMENT" / "{LAND_M2} m² ({HECTARES} Hectares)";
->    (c) gear icon — "PROJECT ACTIVITIES" with three bullet lines: {activity_1}; {activity_2}; {activity_3}.
-> 4. A horizontal strip of {4 or 5} small realistic photo tiles separated by thin white gaps, showing:
->    {tile_1}, {tile_2}, {tile_3}, {tile_4}{, tile_5}.
-> 5. Light-grey band with three columns, each a {PRIMARY_HEX} circular icon with bold text:
->    "PLANNED INVESTMENT" / "ETB {INVESTMENT}.00" / "{investment in words} Birr";
->    "FUNDING STRUCTURE" / "{EQUITY%} Equity (ETB {EQUITY_ETB})" / "{LOAN%} Loan (ETB {LOAN_ETB})";
->    "MARKET DESTINATION" / "{DOMESTIC%} {Local/Domestic} Market" / "{EXPORT%} Export Market" /
->    "{export country list}".
-> 6. A full-width {PRIMARY_HEX} band with five evenly spaced outlined circular icons in white with
->    {ACCENT_HEX} rings, each with a short uppercase caption: "{JOBS} DIRECT JOBS CREATION";
->    "{caption_2}"; "{caption_3}"; "{caption_4}"; "{TAGLINE — short, e.g. CLEAN HOMES. STRONGER INDUSTRY.}".
-> 7. White band, four columns with thin dividers: "SUBMITTED TO / Development Bank of Ethiopia (DBE)
->    & Ethiopian Investment Commission (EIC)"; "DOCUMENT REF. / {DOC_REF}"; "STATUS / Submitted to
->    DBE/EIC"; a small calendar icon + "DATE / {MONTH YEAR}".
-> 8. Footer: small-print confidentiality statement on the left ("This document contains confidential
->    and proprietary information of {COMPANY NAME}…"), and on the right three official logo lockups in
->    a rounded panel: EIC (Ethiopian Investment Commission), IPDC (Industrial Parks Development
->    Corporation), DBE (Development Bank of Ethiopia).
->
-> All text must be spelled exactly as written, sharp and legible. No watermarks, no stock-photo
-> logos other than the three named agencies, no extra colors beyond the stated palette.
+> All text spelled exactly as written, sharp and legible. No watermarks, no extra colors.
 
 ---
 
-## Filling guidance
+## How to fill any archetype
 
-- **{logo_concept}** — invent a simple, on-brand emblem that suits the company name and sector. Vary
-  it each time (shield, hexagon cluster, monogram-in-circle, gear-and-leaf, etc.). Pull the letter
-  from the company's initial.
-- **{HEADLINE}** — use "COMPREHENSIVE FEASIBILITY STUDY" for feasibility-study deliverables (Mengsteab,
-  Senay) or "INVESTMENT PROPOSAL" for proposal deliverables (Kaleab). Match what the brief calls it.
-- **{hero_image} and {tile_*}** — describe real product/process scenes from the brief's sector. Be
-  specific and photographic. These are where the cover gets its sector identity.
-- **{accent_words}** — pick the 1–2 most identifying words of the descriptor to color in ACCENT
-  (e.g. "FMCG MANUFACTURING", "SOLAR PV MODULE", "PLASTIC PRODUCTS").
+- **Pick the archetype before writing the prompt.** State which of the six (and why it fits this
+  client) to Zea in one line before producing the prompt text.
+- **{logo_concept}** — invent a fresh emblem each time (shield, hexagon cluster, monogram-in-circle,
+  gear-and-leaf, etc.), pulling from the company's initial.
+- **{headline}** — "COMPREHENSIVE FEASIBILITY STUDY" for feasibility deliverables, "INVESTMENT
+  PROPOSAL" for proposal deliverables — match what the brief calls it.
+- **Hero/photo content** — describe real product/process scenes from the brief's sector, specific and
+  photographic. This is the sector identity regardless of archetype.
 - Numbers come straight from the verified brief — never invent them.
-- Always include the EIC / IPDC / DBE footer lockups unless the brief says otherwise.
-
-## A worked example (Senay Energy, theme #7 Dark Green + Yellow)
-
-> …Strict two-color brand palette: PRIMARY deep forest green #14532D and ACCENT golden yellow #CA8A04…
-> logo: a circular emblem with a shield and stylized letter S framed by a laurel wreath in #14532D…
-> company name "SENAY ENERGY PLC"… descriptor "SOLAR PV MODULE MANUFACTURING PLANT" with "SOLAR PV
-> MODULE" in #CA8A04… headline "COMPREHENSIVE FEASIBILITY STUDY"… hero: a bright modern solar-module
-> assembly hall with rows of finished PV panels on pallets… fact rows: KILINTO INDUSTRIAL PARK /
-> 30,000 m² (3 Hectares) / "Mono PERC, TOPCon & Bifacial Solar Modules; Solar Cell Assembly &
-> Stringing; Junction Boxes, Cables, Mounting Structures"… metrics: ETB 600,000,000.00 / 30% Equity
-> (ETB 180,000,000.00), 70% Loan (ETB 420,000,000.00) / 70% Domestic, 30% Export — Kenya, Uganda,
-> Tanzania, Rwanda, South Sudan, Djibouti, Somalia… icon strip: "300–400 DIRECT JOBS CREATION",
-> "500 MW ANNUAL SOLAR MODULE CAPACITY", "STRONG IMPORT SUBSTITUTION & FOREIGN EXCHANGE", "RENEWABLE
-> ENERGY & TECHNOLOGY TRANSFER", "FROM ETHIOPIAN SUN. TO REGIONAL POWER."… DOC REF
-> "SENAY-IP-DBE-SOLAR2026-001"… DATE June 2026… EIC / IPDC / DBE footer.
-
-That example reproduces the established Senay cover. New clients follow the same skeleton with their
-own theme color, logo concept, imagery, and figures.
+- Always include the EIC / IPDC / DBE footer credit somewhere, even if compressed (Archetypes 2, 5, 6).
+- **Track which archetype + theme combination was used for each client** (mentally, or note it in the
+  build log) so the next proposal in the same sector gets a different one.
