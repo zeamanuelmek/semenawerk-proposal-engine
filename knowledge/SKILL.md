@@ -258,3 +258,21 @@ module.exports = { children };
 | 4-col | [2340, 2340, 2340, 2340] | 9360 |
 | 5-col income stmt | [2200, 1780, 1780, 1780, 1820] | 9360 |
 | 6-col years | [2000, 1260, 1260, 1260, 1260, 1320] | 8360 |
+
+---
+
+## IMAGE PROMPTS & COLOR THEMES (companion deliverables)
+
+After a proposal is built and validated, produce the companion image prompts. Claude writes
+copy-paste ChatGPT prompts only — Zea generates the images and inserts them manually.
+
+| Resource | File | Use |
+|---|---|---|
+| Color theme library | `knowledge/color-themes.md` | 28 sector-matched PRIMARY/ACCENT/tint themes. Pick per sector + portfolio variety. |
+| Cover prompt skill | `knowledge/image-prompts/cover-prompt-skill.md` | Vertical poster cover prompt. Always. |
+| Background prompt skill | `knowledge/image-prompts/background-prompt-skill.md` | Faded letterhead background prompt. Always. |
+| Infographic prompt skill | `knowledge/image-prompts/infographic-prompt-skill.md` | 1–2 in-document images + placement. Only when warranted. |
+
+Order: state the chosen theme up front (name + 3 hex values) → build proposal → cover prompt →
+background prompt → infographic prompt(s) if warranted. Generate cover first, lock hex codes +
+product look, reuse them in background and infographics so the whole set matches.
