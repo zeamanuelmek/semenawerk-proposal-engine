@@ -269,10 +269,15 @@ copy-paste ChatGPT prompts only — Zea generates the images and inserts them ma
 | Resource | File | Use |
 |---|---|---|
 | Color theme library | `knowledge/color-themes.md` | 28 sector-matched PRIMARY/ACCENT/tint themes. Pick per sector + portfolio variety. |
-| Cover prompt skill | `knowledge/image-prompts/cover-prompt-skill.md` | Vertical poster cover prompt. Always. |
-| Background prompt skill | `knowledge/image-prompts/background-prompt-skill.md` | Faded letterhead background prompt. Always. |
+| Cover prompt skill | `knowledge/image-prompts/cover-prompt-skill.md` | Vertical poster cover prompt, chosen from 6 layout archetypes. Always. |
+| Background prompt skill | `knowledge/image-prompts/background-prompt-skill.md` | Faded letterhead background prompt, chosen from 6 motif archetypes. Always. |
 | Infographic prompt skill | `knowledge/image-prompts/infographic-prompt-skill.md` | 1–2 in-document images + placement. Only when warranted. |
 
-Order: state the chosen theme up front (name + 3 hex values) → build proposal → cover prompt →
+**Three independent dials per client — never just defaulted:** color theme, cover layout archetype,
+background motif archetype. Two proposals in the same sector should not look like the same template
+re-skinned in different colors. State all three up front in one line (e.g. "Theme: Petrol + Mint.
+Cover: Archetype 4. Background: Motif 3.") for Zea to confirm before generating prompts.
+
+Order: state theme + cover archetype + background motif up front → build proposal → cover prompt →
 background prompt → infographic prompt(s) if warranted. Generate cover first, lock hex codes +
 product look, reuse them in background and infographics so the whole set matches.
