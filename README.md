@@ -94,6 +94,30 @@ bash scripts/batch.sh client_a client_b client_c
 
 ---
 
+##Image Prompts — Skill Index
+
+Three prompt skills that generate **copy-paste ChatGPT prompts** for the visual assets around a
+proposal. Claude writes the prompts; Zea generates the images in ChatGPT and inserts them manually.
+
+| Skill | File | Produces | When |
+|---|---|---|---|
+| Cover | `cover-prompt-skill.md` | One vertical poster cover prompt | Standard deliverable, every proposal |
+| Background | `background-prompt-skill.md` | One faded letterhead background prompt | Standard deliverable, every proposal |
+| Infographic | `infographic-prompt-skill.md` | 1–2 in-document infographic prompts + placement | Only when a section genuinely benefits |
+
+Color values for all three come from `../color-themes.md`. Generate the **cover first**, lock the
+two hex codes + product look, then reuse them in the background and any infographic so the whole set
+matches as one stationery system.
+
+## Standard delivery order after a proposal is built
+
+1. Cover prompt (always)
+2. Background prompt (always)
+3. Infographic prompt(s) — only if warranted, max two, each with an exact insertion point
+4. Hand all prompts to Zea as copy-paste blocks; he generates and inserts manually.
+
+---
+
 ## Completed Proposals
 
 | Company | Sector | Pages | Investment |
